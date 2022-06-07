@@ -54,7 +54,7 @@
         "regenerate_delete_old": false
     },
     "database": {
-        "default_database": "SokobanAPI-Android",
+        "default_database": "sokoban",
         "progressive_connection": true,
         "databases_list": [
             {
@@ -62,7 +62,7 @@
 				"password": "", 
 				"host": "localhost", 
 				"port": "3306", 
-				"name": "SokobanAPI-Android", 
+				"name": "sokoban", 
                 "encoding": "utf8", 
                 "type": "mysql",
                 "throw_sql_error": true,
