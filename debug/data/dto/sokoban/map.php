@@ -6,7 +6,7 @@ use Kernel\DataBase\Factory\Crud;
 
 
 /**
- * Classe DTO Map
+ * Classe DTO Map.
  * 
  * @author thiba
  * @version 1.0
@@ -16,14 +16,14 @@ use Kernel\DataBase\Factory\Crud;
 class Map extends Crud {
 
     /**
-     * @var mixed Les propriétés
+     * @var mixed Les propriétés.
      */
     public $_map_id;
     public $map_board;
     
 
     /**
-     * Constructeur de la classe
+     * Constructeur de la classe.
      * 
      * @access public
      * @return void

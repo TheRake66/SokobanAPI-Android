@@ -9,7 +9,7 @@ use Model\Dto\Sokoban\Map as Dto;
 
 
 /**
- * Classe DAO Map
+ * Classe DAO Map.
  * 
  * @author thiba
  * @version 1.0
