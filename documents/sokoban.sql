@@ -24,27 +24,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `map`
+-- Structure de la table `board`
 --
 
-DROP TABLE IF EXISTS `map`;
-CREATE TABLE IF NOT EXISTS `map` (
-  `map_id` int(11) NOT NULL AUTO_INCREMENT,
-  `map_board` varchar(1000) NOT NULL,
-  PRIMARY KEY (`map_id`)
+DROP TABLE IF EXISTS `board`;
+CREATE TABLE IF NOT EXISTS `board` (
+  `name`  varchar(50) NOT NULL,
+  `board`  varchar(1000) NOT NULL,
+  `width`  int(11) NOT NULL,
+  `height`  int(11) NOT NULL,
+  PRIMARY KEY (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
+
 --
--- Déchargement des données de la table `map`
+-- Déchargement des données de la table `boards`
 --
 
-INSERT INTO `map` (`map_id`, `map_board`) VALUES
-(1, '--###--\r\n###P.##\r\n#..GB##\r\n#...B.#\r\n#.#G..#\r\n#.....#\r\n#######'),
-(2, '########\r\n#.#P..##\r\n#.B....#\r\n#...B.##\r\n#.#G..##\r\n#.....G#\r\n########'),
-(3, '########\r\n#.#P..##\r\n#.B....#\r\n#...B.##\r\n#.#G..##\r\n#.....G#\r\n########'),
-(4, '########\r\n#.#P..##\r\n#.B....#\r\n#...B.##\r\n#.#G..##\r\n#.....G#\r\n########'),
-(5, '########\r\n#.#P..##\r\n#.B....#\r\n#...B.##\r\n#.#G..##\r\n#.....G#\r\n########'),
-(6, '########\r\n#.#P..##\r\n#.B....#\r\n#...B.##\r\n#.#G..##\r\n#.....G#\r\n########');
+INSERT INTO `board` (`name`, `board`, `width`, `height`) VALUES
+('Api 1', '--###--\r\n###P.##\r\n#..GB##\r\n#...B.#\r\n#.#G..#\r\n#.....#\r\n#######', 0, 0),
+('Api 2', '########\r\n#.#P..##\r\n#.B....#\r\n#...B.##\r\n#.#G..##\r\n#.....G#\r\n########', 0, 0);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

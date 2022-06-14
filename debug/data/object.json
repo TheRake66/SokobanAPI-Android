@@ -1,11 +1,11 @@
 [
   {
-    "name": "sokoban\\map",
-    "created": "2022-06-07T11:47:26.5306119+02:00",
+    "name": "sokoban\\board",
+    "created": "2022-06-14T22:53:40.0225195+02:00",
     "madeby": "thiba",
     "paths": [
-      "debug/data/dao/sokoban/map.php",
-      "debug/data/dto/sokoban/map.php"
+      "debug/data/dao/sokoban/board.php",
+      "debug/data/dto/sokoban/board.php"
     ]
   }
 ]

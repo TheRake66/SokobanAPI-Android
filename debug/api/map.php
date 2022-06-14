@@ -6,9 +6,7 @@ use Kernel\Communication\Rest;
 use Kernel\Security\Vulnerability\Xss;
 use Kernel\Security\Vulnerability\Csrf;
 use Kernel\Security\Validation;
-use Model\Dto\Sokoban\Map as SokobanMap;
-
-
+use Model\Dto\Sokoban\Board;
 
 /**
  * Module d'API Map.
@@ -29,14 +27,7 @@ class Map extends Rest {
      * @return mixed Résultat de l'appel.
      */
     function get($route, $query, $body) {
-        $this->match('/maps', function() {
-            $this->send(SokobanMap::all(), 0, 'Récupération des maps.');
-        });
-        $this->match('/maps/{id}', function() use ($query) {
-            $id = $this->data($query, 'id');
-            $obj = new SokobanMap($id);
-            $this->send($obj->read(), 0, 'Récupération de la map.');
-        });
+        $this->send(Board::all(), 0, 'Récupération des cartes.');
     }
 
 
@@ -49,11 +40,7 @@ class Map extends Rest {
      * @return mixed Résultat de l'appel.
      */
     function post($route, $query, $body) {
-        $this->match('/maps', function() use ($body) {
-            $map = $this->data($body, 'map');
-            $obj = new SokobanMap(null, $map);
-            $this->send($obj->create(), 0, 'Création d\'une map.');
-        });
+        $this->send(null, 0, 'Fonction non implémentée !', 500);
     }
 
 
@@ -79,11 +66,7 @@ class Map extends Rest {
      * @return mixed Résultat de l'appel.
      */
     function delete($route, $query, $body) {
-        $this->match('/maps/{id}', function() use ($query) {
-            $id = $this->data($query, 'id');
-            $obj = new SokobanMap($id);
-            $this->send($obj->delete(), 0, 'Suppression d\'une map.');
-        });
+        $this->send(null, 0, 'Fonction non implémentée !', 500);
     }
 
 
